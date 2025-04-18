@@ -4,3 +4,5 @@ requests
 beautifulsoup4
 google-generativeai
 python-dotenv
+fastapi
+uvicorn
