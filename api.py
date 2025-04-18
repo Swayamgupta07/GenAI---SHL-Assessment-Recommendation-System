@@ -7,17 +7,14 @@ import os
 import re
 import json
 
-# Load environment variables
 load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 app = FastAPI()
 
-# Input model
 class QueryInput(BaseModel):
     query: str
 
-# Output model for each assessment
 class AssessmentOutput(BaseModel):
     Assessment_Name: str
     URL: str
@@ -26,7 +23,6 @@ class AssessmentOutput(BaseModel):
     Duration: int
     Test_Type: List[str]
 
-# Full response model
 class RecommendResponse(BaseModel):
     recommended_assessments: List[AssessmentOutput]
 
@@ -34,7 +30,6 @@ class RecommendResponse(BaseModel):
 def health_check():
     return {"status": "healthy"}
 
-# Parse Gemini's JSON response
 def extract_valid_json(text):
     try:
         match = re.search(r'\[\s*{.*?}\s*]', text, re.DOTALL)
