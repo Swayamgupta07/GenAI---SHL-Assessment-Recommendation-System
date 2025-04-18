@@ -258,6 +258,6 @@ st.markdown("""
     <div style="text-align: center; color: #9CA3AF; margin-top: 2rem; margin-bottom: 1rem;">
         <p>Powered by Streamlit & Gemini API</p>
         <p><a href="https://www.shl.com/solutions/products/product-catalog/" style="color: #60A5FA;">SHL Catalog</a></p>
-        <p><a href="https://github.com/Swayamgupta07" style="color: #60A5FA;">View Code</a></p>
+        <p><a href="https://github.com/Swayamgupta07/GenAI---SHL-Assessment-Recommendation-System" style="color: #60A5FA;">View Code</a></p>
     </div>
 """, unsafe_allow_html=True)
